@@ -1,0 +1,65 @@
+ 
+<html>
+    <head>
+      <title>Hand Gestures</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body>
+    <div class="container">
+    
+      <center>
+        <h1 class="btn btn-warning heading">HAND GESTURES <br> <span><p>&#9996; &#128077; &#128076;</p></span></h1>
+        <br><br>
+  
+        <p style="font-size: 22px;">Take your selfie so the AI can recognise your hand gesture
+            <br>
+          <b style="color:yellow">Are you showing a thumbs up?</b>
+          <br>
+          <b style="color:cornflowerblue">A peace sign?</b>
+          <br>
+          <b style="color:crimson">An ok/fine sign?</b>
+          <br>
+        </p>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Webcam View - </label>
+          <div id="camera">
+  
+          </div>
+          <br><br>
+  
+          <button class="btn btn-primary" onclick="take_Snapshot()">Capture Gesture</button>
+  
+        </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+           <label>Prediction-</label>
+           <p id="resultGesture"></p>
+           <p id="resultEmoji"></p>
+        </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Snapshot - </label>
+          <div id="result">
+  
+          </div>
+          <br><br>
+         
+          <button class="btn btn-danger" onclick="Predict()">Predict Emotion</button>
+        </div>
+      </center>
+  
+    </div>
+  
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
